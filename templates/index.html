@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Let's Learn about Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+  </div>
+
+  <!-- Mars News -->
+  <div class = "container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <h2>The Lastest News From Mars</h2>
+          <h4>{{ mars_data.news_title }}</h4>
+          <h4>{{ mars_data.news_p }}</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Mars Image-->
+    <div class="container-fluid"> 
+      <div class = "row">
+      <img src="{{ mars_data.featured_image_url }}" alt="Mars Featured Image">
+      <h2> This is the Featured Image of Mars </h2>
+    </div>
+    </div>
+  
+  <!-- Mars Weather -->
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>The Latest Weather on Mars</h3>
+          <p>{{ mars_data.mars_weather }}</p>
+        </div>
+    </div>
+  
+  <!-- Mars Facts Table -->
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Mars Facts</h3>
+          <p>{{ mars_data.mars_table }}</p>
+          </div>
+    </div>
+
+  <!-- Mars Hemispheres-->
+
+</body>
+</html>
